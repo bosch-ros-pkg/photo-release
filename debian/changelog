@@ -1,0 +1,49 @@
+ros-melodic-photo (1.0.3-1bionic) bionic; urgency=high
+
+  * Fix /get-config problem with TEXT type (#8 <https://github.com/bosch-ros-pkg/photo/issues/8>)
+    Fix a problem where, when trying to call the /get-config
+    service on a text field, you would first get wrong data,
+    and on the second call the node would crash.
+  * Fix release (#11 <https://github.com/bosch-ros-pkg/photo/issues/11>)
+    * add opencv as dependency
+    * style cleanup
+  * Merge pull request #6 <https://github.com/bosch-ros-pkg/photo/issues/6> from bosch-ros-pkg/Karsten1987-patch-1
+    Make Karsten maintainer
+  * Make Karsten maintainer
+  * Fixed error in CMakeLists (#5 <https://github.com/bosch-ros-pkg/photo/issues/5>)
+  * Contributors: Babis Boloudakis, Karsten Knese, Philip Roan
+
+ -- Philip Roan <Philip.Roan@us.bosch.com>  Tue, 30 Apr 2019 00:00:00 -0000
+
+ros-melodic-photo (1.0.2-1bionic) bionic; urgency=high
+
+  * update rosdep keys for libgphoto2
+  * Contributors: root
+
+ -- Philip Roan <Philip.Roan@us.bosch.com>  Wed, 13 Mar 2019 00:00:00 -0000
+
+ros-melodic-photo (1.0.1-1bionic) bionic; urgency=high
+
+  * Melodic devel (#4 <https://github.com/bosch-ros-pkg/photo/issues/4>)
+    * Make it compile on Ubuntu Bionic
+    Changes from code-iai fork: https://github.com/code-iai/iai_photo
+    * Fix delete on array
+    * Fix set config for toggle
+    A bool was implicitly casted to int through a void*
+    * Fix whitespaces
+    * Fix segmentation fault if no camera connected
+    * Pass std::string by const reference to avoid copies
+    * Sanitize a bit more
+  * Merge pull request #3 <https://github.com/bosch-ros-pkg/photo/issues/3> from proan/hydro-devel
+    Added another dependency and removed superfluous comments.
+  * Added another dependency and removed superfluous comments.
+  * Merge pull request #2 <https://github.com/bosch-ros-pkg/photo/issues/2> from proan/hydro-devel
+    Catkin-ized package for photo library.
+  * Add dependency on message and service generation being complete first.
+  * Catkin-ized package for photo. This package has been moved from the larger bosch_drivers repository.
+  * Initial commit
+  * Contributors: Philip Roan, Romain Reignier
+
+ -- Philip Roan <Philip.Roan@us.bosch.com>  Wed, 13 Mar 2019 00:00:00 -0000
+
+
